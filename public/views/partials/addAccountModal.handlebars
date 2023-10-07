@@ -1,0 +1,39 @@
+<div class="modal fade" id="addAccountModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add account</h1>
+                <div class="d-flex justify-content-center align-items-center">
+                    {{!-- <i class="bi bi-question-lg p-2"></i> --}}
+                    <span role="button" class="text-secondary h4 mb-1 me-2 p-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Login to your steam account on keydrop in the opened browser and then close the window">?</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+            </div>
+            <div class="modal-body px-4">
+                <p>Login to your steam account on keydrop in the opened browser and then close the window</p>
+                <label class="pb-1" for="configInput">Config name</label>
+                <input type="text" class="form-control" id="configInput" aria-describedby="configInput" placeholder="Config name" onkeyup="checkInput()">
+                <small id="hint" class="form-text text-muted">It is only a nametag for your account.</small>
+                <hr/>
+                <div class="row">
+                    <div class="col-5 d-flex align-items-center justify-content-center">
+                        <button id="loginSteam" type="button" class="btn btn-success w-100" disabled>Login to Keydrop</button>
+                    </div>
+                    <div class="col d-flex ps-0">
+                        <div class="me-2 align-items-center justify-content-center d-flex">
+                            <div id="loadingSpinner" class="spinner-border text-secondary invisible" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        
+                        <p id="status" class="text-secondary text-center p-1"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

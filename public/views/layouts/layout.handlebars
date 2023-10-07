@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battlejoiner</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+	<link href="/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="./js/jquery-3.6.4.min.js"></script>
+    <script src="./js/handlebars.min.js"></script>
+</head>
+<body class="body-bg">
+    <nav class="navbar navbar-light bg-dark shadow">
+        <div class="container">
+        	<a class="navbar-brand">
+            	<h2 class="text-light">Battlejoiner</h2>
+        	</a>
+        </div>
+    </nav>
+    {{{ body }}}
+    {{> addAccountModal }}
+    {{> playModal }}
+    {{> optionsModal }}
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+</html>

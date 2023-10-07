@@ -1,0 +1,10 @@
+.body-bg{
+    background-color: #e3e3e3;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.6);
+}

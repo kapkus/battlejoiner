@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Avatar</th>
+            <th scope="col">Steam name</th>
+            <th scope="col">Config name</th>
+            <th scope="col">Options</th>
+        </tr>
+    </thead>
+    <tbody id="data-table">
+            {{#each data}}
+            <tr class="align-middle" data-configName="{{@key}}">
+                <th scope="row">{{@index}}</th>
+                <td><img height="80px" src="{{this.avatar}}"></td>
+                <td>{{this.userName}}</td>
+                <td>{{@key}}</td>
+                <td>
+                    <button type="button" class="btn btn-success accountPlay" data-bs-toggle="modal" data-bs-target="#playModal" data-action="play"><i class="bi bi-play-fill"></i></button>
+                    <button type="button" class="btn btn-secondary accountOptions" data-bs-toggle="modal" data-bs-target="#optionsModal" data-action="gear"><i class="bi bi-gear-fill"></i></button>
+                    <button type="button" class="btn btn-danger accountDelete" data-action="delete"><i class="bi bi-trash3-fill"></i></button>
+                </td>
+            </tr>
+            {{/each}}
+    </tbody>
+</table>
